@@ -1,0 +1,58 @@
+/*initial*/
+*{ margin:0; padding:0;}
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6,p{margin:0}
+i{font-style:normal}
+body{font-family:Arial,Helvetica,"Microsoft YaHei",simsun,Sans-Serif;font-family:"Microsoft YaHei"\9;color: #333;font-size: 14px;background-color: #fafafa;}
+button{border: none;outline: none;}
+img{outline: none;border:0;}
+a{text-decoration: none;display: inline-block;outline: none;color: inherit;}
+ul,ol,dl{list-style: none;margin: 0;padding: 0;}
+input{outline: none;}
+.container{width: 998px !important;padding:0}
+dd>span,dd>a{display: inline-block;}
+textarea{resize: none;}
+.clearfix:after{content:".";display:block;height:0;clear:both;visibility:hidden}
+.clearfix{*+height:1%}
+.al_noCopy{-moz-user-select: none;-webkit-user-select: none;-ms-user-select: none;-khtml-user-select: none;user-select: none; }
+
+/* bootstrap */
+
+.btn{border-radius: 0;}
+.input-group .input-group-addon{background-color: transparent;border-radius: 0;;border-left: 0;border-color: #ddd;color: #333;padding:0 8px}
+
+.nav-tabs>li.active>a, .nav-tabs>li.active>a:focus, .nav-tabs>li.active>a:hover{border-radius: 0;border-color: #ff7e04;border-bottom-color: #fff;}
+.nav-tabs>li>a{border-radius: 0;}
+.nav-tabs>li>a:hover,.nav-tabs>li>a:focus{border-bottom:0;}
+.nav-tabs{border-color: #ff7e04;}
+
+.control-label{font-weight: normal;color: #666;margin:0;line-height: 32px;}
+.form-control{border-radius: 0;border-color: #ddd;font-size: 16px;color: #1a1a1a;line-height: 30px;height:32px;padding:0 6px;box-shadow: none;}
+.form-control:focus{border-color: #999;box-shadow: none;}
+.form-control[onfocus][onblur]{color: #999;}
+select.form-control{padding-right: 0\9;}
+.ly_container .row{margin: 0;}
+.ly_container .row+.row{margin-top:18px}
+.ly_container .row>div{padding: 0;}
+
+/*button*/
+.al_buttonboxs{text-align:center;padding:20px 0}
+.al_buttonboxs.fixBottom{position: fixed;bottom: 0;left: 0;width: 100%;background: #fafafa;}
+.al_buttonboxs button,.al_buttonboxs a{padding:10px 50px;font-size:22px;line-height:1; display:inline-block}
+.ly_container .al_buttonboxs button,.ly_container .al_buttonboxs a{padding:8px 40px 10px 40px;font-size:20px;line-height:1; display:inline-block}
+.ly_container .al_buttonboxs{padding-bottom: 0;}
+.ly_container .al_buttonboxs.fixBottom{padding-bottom: 20px;}
+.al_buttonboxs button+button,.al_buttonboxs a+a{margin-left:20px}
+.submitBtn{background-color:#EC2020;color:#FFFFFF !important;}
+.submitBtn:hover{background-color:#EE3A3A;}
+.submitBtn:focus{background-color:#E11414}
+.cancelBtn{background-color:transparent;color:#666;border:1px solid #999}
+.btn_common{display: inline-block; padding: 0 20px; line-height: 32px; color: #fff !important; background: #ff7e04;font-size: 16px;}
+.btn_common:hover{background-color:#FF9838;}
+.btn_common:focus{background-color:#EB7100;}
+.btn_common.warning{background: #EC2020;}
+.btn_common.warning:hover{background-color:#EE3A3A;}
+.btn_common.warning:focus{background-color:#E11414;}
+.btn_common.blue{background: #15a5ed;}
+.btn_common.blue:hover{background-color:#2EAFEF;}
+.btn_common.blue:focus{background-color:#1097DA;}
+.selectBtn{border-radius: 0;background-color: #fff;border-color: #ddd;box-shadow: none !important;}

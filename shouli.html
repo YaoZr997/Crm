@@ -1,0 +1,69 @@
+<!DOCTYPE>
+<html lang="en">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta http-equiv="x-ua-compatible" content="IE=edge">
+		<link href="css/globalAss.css" rel="stylesheet">
+		<title>CRM</title>
+	</head>
+
+	<body>
+		<!-- <img src="images/shouli.jpg" width="1200" style="display:block;margin:0 auto;" alt=""> -->
+		<!-- <iframe src="http://172.27.1.243/crm/index.html" width="100%" height="800" frameborder="0"></iframe> -->
+		<script type="text/javascript">
+			function ch(a,b){
+				this.a = a,
+				this.b = b;
+			};
+			/*ch.prototype.jia = function(){
+				return this.a + this.b;
+			}
+			ch.prototype.jian = function(){
+				return this.a - this.b;
+			}
+			ch.prototype.cheng = function(){
+				return this.a * this.b;
+			}
+			ch.prototype.chu = function(){
+				return this.a / this.b;
+			}
+			ch.prototype.range = function(x){
+				if ((x<this.a&&x>this.b) || (x>this.a&&x<this.b)) {
+					return 'This number is in range!'
+				}else{
+					return 'This number is not in range!'
+				}
+			}*/
+			ch.prototype = {
+				jia : function(){
+					return this.a + this.b;
+				},
+				jian : function(){
+					return this.a - this.b;
+				},
+				cheng : function(){
+					return this.a * this.b;
+				},
+				chu : function(){
+					return this.a / this.b;
+				},
+				range : function(x){
+					if ((x<this.a&&x>this.b) || (x>this.a&&x<this.b)) {
+						return 'This number is in range!'
+					}else{
+						return 'This number is not in range!'
+					}
+				}
+			}
+			var chc = new ch(10,2);
+			console.log(chc.constructor);
+			console.log(chc.jia());
+			console.log(chc.jian());
+			console.log(chc.cheng());
+			console.log(chc.chu());
+			console.log(chc.range(5));
+			console.log(chc.range(11));
+			console.log(ch.prototype);
+		</script>
+	</body>
+</html>

@@ -1,0 +1,649 @@
+<!DOCTYPE>
+<html lang="en">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta http-equiv="x-ua-compatible" content="IE=edge">
+		<title>CRM</title>
+		<link href="css/globalAss.css" rel="stylesheet">
+		<link href="css/entrance.css" rel="stylesheet">
+	</head>
+
+	<body>
+		<div class="sb_siderbarBoxs" id="siderbarBoxs" style="left:0;">
+			<div class="sb_popup" id="confirm" style="display:none;">
+				<!-- <a href="javascript:void(0)" class="sb_popupClose">×</a> -->
+				<div class="sb_popupContent">全国4G套餐是否受理成功？</div>
+				<div class="sb_popupFooter">
+					<div class="sb_col-6"><a href="javascript:void(0)" class="sb_popupbtn">是</a></div>
+					<div class="sb_col-6"><a href="javascript:void(0)" class="sb_popupbtn" id="slsb" style="border-left:1px solid #666;">否</a></div>
+				</div>
+			</div>
+			<div class="sb_popup" id="slsbr" style="display:;">
+				<!-- <a href="javascript:void(0)" class="sb_popupClose">×</a> -->
+				<div class="sb_popupContent">
+					<h6 style="margin-bottom:10px;text-align:left;font-size:14px;font-weight:normal;">请选择受理失败的原因</h6>
+					<div>
+						<select style="width:100%;">
+							<option value="">理由1</option>
+							<option value="">理由2</option>
+							<option value="">理由3</option>
+							<option value="">理由4</option>
+							<option value="">理由5</option>
+						</select>
+						<textarea onfocus="inputHintFocus(this)" onblur="inputHintBlur(this)" style="width:100%;padding:5px 0;height:60px;color:#bbb;margin-top:10px;">备注</textarea>
+					</div>
+				</div>
+				<div class="sb_popupFooter">
+					<div class="sb_col-6"><a href="javascript:void(0)" class="sb_popupbtn">确定</a></div>
+					<div class="sb_col-6"><a href="javascript:void(0)" class="sb_popupbtn" id="return" style="border-left:1px solid #666;">返回</a></div>
+				</div>
+			</div>
+			<div class="sb_popupBg" style="display:;"></div>
+			<div class="sb_accountInf_wrap sb_clearfix">
+				<div class="sb_accountInf">
+					<div class="sb_ai_item">
+						<div class="sb_userInfo">
+							<img src="images/user.png" width="60" alt="" style="position:absolute;top:0;left:0;">
+							<div>
+								<div class="sb_row">姓名：<span>*大嘴</span><img src="images/man.png" height="20" title="男" alt=""/><img src="images/woman.png" height="20" title="女" alt="" style="display:none;"/><img src="images/level.png" height="20" title="1星用户" alt="" style="display:;"/><img src="images/diamand.png" height="20" title="钻石用户" alt="" style="display:none;"/><img src="images/gold.png" height="20" title="黄金用户" alt="" style="display:none;"/><img src="images/sliver.png" height="20" title="白银用户" alt="" style="display:none;"/><span style="margin-left:10px;">网龄：<span>5年9个月</span></span></div>
+								<div class="sb_row"><span style="color:#ff7e04;font-size:20px;">18678689452</span></div>
+								<div class="sb_row">主产品：<span>4G沃派16套餐_转4G</span><img src="images/iphone.png" height="20" title="iPhone6s plus" alt=""/><img src="images/KD.png" height="20" title="宽带" alt="" style="display:none;"/></div>
+								<div class="sb_row sb_iconGroup" style="margin-left:-5px;"><img src="images/rn.png" alt="" title="身份证认证"><img src="images/rnno.png" alt="" title="未实名认证" style="display:none;"><img src="images/deal.png" alt="" title="合约用户" style="display:none;"/><img src="images/dealno.png" alt="" title="非合约用户"/><img src="images/mix.png" alt="" title="融合用户" style="display:none;"/><img src="images/mixno.png" alt="" title="非融合用户" style="display:;"/><img src="images/i2G.png" height="20" title="2G用户" alt="" style="display:none;"/><img src="images/i3G.png" height="20" title="3G用户" alt="" style="display:none;"/><img src="images/i4G.png" height="20" title="4G用户" alt="" style="display:;"/><img src="images/i4Gno.png" height="20" title="非4G用户：该用户终端不是4G终端" alt="" style="display:none;"/><img src="images/mg.png" alt="" title="敏感用户"/><img src="images/gw.png" alt="" title="高危用户"/><img src="images/llbnb.png" alt="" title="流量剩余：4.8GB；失效时间：2016年11月11日。"/></div>
+							</div>
+						</div>
+						<div class="sb_ai_content">
+							<div id="chart" class="sb_chart" style="width:120%;height:240px;position:relative;left:-10%;"></div>
+						</div>
+					</div>
+				</div>
+				<div class="sb_acceptBoxs sb_clearfix">
+					<div class="sb_acceptWrap">
+						<!-- <div class="sb_tagC">
+							<div id="ai_portraitC" class="sb_ai_portraitC">
+								<dl class="sb_ai_portrait" >
+									<dt>基础：</dt>
+									<dd class="sb_ai_porsign"><a class="sb_ai_userTagb" href="javascript:void(0)" style="display:none;">未实名</a><a class="sb_ai_userTagb" href="javascript:void(0)">非USIM卡</a><a class="sb_ai_userTagb" href="javascript:void(0)" style="display:none;">非4G用户</a><a class="sb_ai_userTagb" href="javascript:void(0)">终端解锁</a><a class="sb_ai_userTagb" href="javascript:void(0)">登录4G网络情况</a><a class="sb_ai_userTago" href="javascript:void(0)" style="display:none;">服务敏感度</a><a class="sb_ai_userTagr" href="javascript:void(0)" style="display:none;">高危用户</a></dd>
+									<dt>偏好：</dt>
+									<dd class="sb_ai_porsign"><a class="sb_ai_userTagb" href="javascript:void(0)" id="proLevelup">融合推荐</a><a class="sb_ai_userTagb" href="javascript:void(0)" id="proLevelup" title="有两个产品可升级，点击此标签进行升级">合约推荐</a></dd>
+									<dt>消费：</dt>
+									<dd class="sb_ai_porsign"><a href="javascript:void(0)"class="sb_ai_userTagb" href="">套餐匹配推荐</a><a  href="javascript:void(0)"class="sb_ai_userTagb">流量饱和推荐</a><a  href="javascript:void(0)"class="sb_ai_userTagb">语音饱和推荐</a><a  href="javascript:void(0)"class="sb_ai_userTagb">短信饱和推荐</a></dd>
+								</dl>
+							</div>
+							<div class="sb_labelC clearfix">
+								<label class="sb_label">标签区域：</label>
+								<label class="sb_label"><i></i>必须处理</label>
+								<label class="sb_label"><i style="background-color:#ff7e04;"></i>建议处理</label>
+							</div>
+						</div> -->
+						<style type="text/css">
+							.sb_ai_portrait>dt{background-color: #15A5ED;color: #fff;position: relative;padding: 6px;line-height: 20px;}
+							.sb_ai_portrait>dt>i{display: block;float: left;width: 20px;height: 20px;background: url(images/change.png) no-repeat;}
+							.sb_ai_portrait>dt.active>i{background-position: 0 -20px;}
+							.sb_ai_portrait>dd{background-color: #f8f8f8;padding: 6px;display: none;}
+							.sb_ai_portrait>dt.active+dd{display: block;}
+							.sb_ai_portrait>dd+dt,.sb_ai_portrait>dt+dt{margin-top: 10px;}
+							.sb_ai_portrait>dt>a{position: absolute;right: 6px;font-size: 14px;}
+						</style>
+						<div class="sb_tagC">
+							<div id="ai_portraitC" class="sb_ai_portraitC">
+								<dl class="sb_ai_portrait" >
+									<dt class="active"><i></i>合约推荐<a href="javascript:void(0)">办理>></a></dt>
+									<dd>该用户目前每月消费为130元，使用的套餐为4G全国76元，改换套餐可满足目前的使用情况，降低每月消费。</dd>
+									<dt><i></i>融合推荐<a href="javascript:void(0)">办理>></a></dt>
+									<dd>该用户目前每月消费为130元，使用的套餐为4G全国76元，改换套餐可满足目前的使用情况，降低每月消费。</dd>
+									<dt><i></i>套餐匹配推荐<a href="javascript:void(0)">办理>></a></dt>
+									<dd>该用户目前每月消费为130元，使用的套餐为4G全国76元，改换套餐可满足目前的使用情况，降低每月消费。</dd>
+								</dl>
+							</div>
+						</div>
+						<style type="text/css">
+							.sb_goodsNameS{padding-left: 40px;background: url(images/goods.png) left top no-repeat;margin-top: 10px;font-size: 15px;color: #ef7d28;min-height: 32px;cursor: pointer;}
+							.sb_marketSay{padding: 5px;margin-top: 10px;background-color: #f8f8f8;}
+							.sb_marketSay>h6{font-size:14px;margin-bottom:5px;}
+							.sb_siderbarBoxs ul.sb_goodsListNew{padding-left: 20px;margin-top: 10px;}
+							.sb_siderbarBoxs ul.sb_goodsListNew,.sb_siderbarBoxs ul.sb_goodsListNew>li{list-style-type: disc;}
+							.sb_siderbarBoxs ul.sb_goodsListNew>li{padding:3px 0;color: #ff7e04;}
+							.sb_siderbarBoxs ul.sb_goodsListNew>li>a{color: #333;}
+							.sb_siderbarBoxs ul.sb_goodsListNew>li>a:hover{color: #ff7e04;}
+							.sb_proListNew>li+li{border-top: 1px dashed #ddd;margin-top:10px;}
+							.sb_goodsMore{display:none;}
+						</style>
+						<div id="ab_proDetail">
+							<div class="sb_ab_proList">
+								<h5 style="line-height:20px;position:relative;">推荐<div class="sb_mhSearch"><input style="color:#bbb;" type="text" value="请输入商品名称" onfocus="inputHintFocus(this)" onblur="inputHintBlur(this)" ><a href="javascript:void(0)"></a></div></h5>
+								<div class="sb_goodsListC">
+									<ul class="sb_proListNew">
+										<li>
+											<h1 class="sb_goodsNameS">
+												价值填充-全省-常驻地无宽带资源覆盖BSS用户承诺低消送流量-1612
+											</h1>
+											<div class="sb_goodsMore">
+												<div class="sb_marketSay">
+													<h6>营销话术：</h6>
+													<p><i></i><span>该用户目前每月消费为130元，使用的套餐为4G全国76元，改换套餐可满足目前的使用情况，降低每月消费。</span></p>
+												</div>
+												<ul class="sb_goodsListNew">
+													<li><a href="javascript:void(0)">承诺低消130元送1GB省内流量 >></a></li>
+													<li><a href="javascript:void(0)">承诺低消130元送1GB省内流量 >></a></li>
+													<li><a href="javascript:void(0)">承诺低消130元送1GB省内流量 >></a></li>
+													<li><a href="javascript:void(0)">承诺低消130元送1GB省内流量 >></a></li>
+													<li><a href="javascript:void(0)">承诺低消130元送1GB省内流量 >></a></li>
+													<li><a href="javascript:void(0)">承诺低消130元送1GB省内流量 >></a></li>
+												</ul>
+												<div class="sb_ab_btnBoxs">
+													<div class="sb_rejectReasonC sb_zbklr">
+														<div class="sb_rejectReason">
+															<h6>请选择用户暂不考虑的原因</h6>
+															<div>
+																<select style="width:100%;">
+																	<option value="">办理业务不方便</option>
+																	<option value="">暂时不需要</option>
+																	<option value="">价格不够优惠</option>
+																	<option value="">以后再说</option>
+																	<option value="">其它</option>
+																</select>
+																<textarea onfocus="inputHintFocus(this)" onblur="inputHintBlur(this)" style="width:100%;padding:5px 0;height:60px;color:#bbb;margin-top:10px;">备注</textarea>
+															</div>
+															<div class="sb_rejectOpe">
+																<a class="sb_btn sb_cancelBtn" href="javascript:void(0)" style="background-color: #EC2020;margin:0 5px;">确定</a>
+																<a class="sb_btn sb_cancelBtn sb_rejectCancel" href="javascript:void(0)">取消</a>
+															</div>
+															<i></i>
+														</div>
+													</div>
+													<div class="sb_rejectReasonC sb_jjr">
+														<div class="sb_rejectReason">
+															<h6>请选择用户拒绝的原因</h6>
+															<div>
+																<select style="width:100%;">
+																	<option value="">直接拒绝</option>
+																	<option value="">要求该业务不再打扰</option>
+																	<option value="">要求所有业务不再打扰</option>
+																</select>
+																<textarea onfocus="inputHintFocus(this)" onblur="inputHintBlur(this)" style="width:100%;padding:5px 0;height:60px;color:#bbb;margin-top:10px;">备注</textarea>
+															</div>
+															<div class="sb_rejectOpe">
+																<a class="sb_btn sb_cancelBtn" href="javascript:void(0)" style="background-color: #EC2020;margin:0 5px;">确定</a>
+																<a class="sb_btn sb_cancelBtn sb_rejectCancel" href="javascript:void(0)">取消</a>
+															</div>
+															<i></i>
+														</div>
+													</div>
+													<a class="sb_btn sb_cancelBtn zbkl" href="javascript:void(0)" style="margin-right:5px;">暂不考虑</a>
+													<a class="sb_btn sb_cancelBtn sb_jj" href="javascript:void(0)" style="background:none;">拒绝</a>
+												</div>
+											</div>
+										</li>
+									</ul>
+								</div>
+								
+								<!-- <div class="sb_goodsListC">
+									<ul class="sb_goodsList">
+										<li class="sb_goodsTop">
+											<a href="javascript:void(0)">
+												<img src="images/jx.png" width="60" alt="">
+												<div class="sb_goodsInfo">
+													<div class="sb_goodsName">4G全国套餐 存费送流量存费送流量<img src="images/jian.png" height="20" title="推荐产品" alt=""></div>
+													<div class="sb_goodsPrice">￥76</div>
+												</div>
+											</a>
+											<div class="sb_goodsSell">
+												<i class="sb_AT"></i>
+												<h6>营销话术：</h6>
+												<p><i></i><span>该用户目前每月消费为130元，使用的</span></p>
+												<h6>产品描述：</h6>
+												<p><i></i><span>该用户目前每月消费为130元，使用的套餐为4G全国76元，改换套餐可满足目前的使用情况，降低每月消费。</span></p>
+												<div class="sb_ab_btnBoxs">
+													<div class="sb_rejectReasonC sb_zbklr">
+														<div class="sb_rejectReason">
+															<h6>请选择用户暂不考虑的原因</h6>
+															<div>
+																<select style="width:100%;">
+																	<option value="">办理业务不方便</option>
+																	<option value="">暂时不需要</option>
+																	<option value="">价格不够优惠</option>
+																	<option value="">以后再说</option>
+																	<option value="">其它</option>
+																</select>
+																<textarea onfocus="inputHintFocus(this)" onblur="inputHintBlur(this)" style="width:100%;padding:5px 0;height:60px;color:#bbb;margin-top:10px;">备注</textarea>
+															</div>
+															<div class="sb_rejectOpe">
+																<a class="sb_btn sb_cancelBtn" href="javascript:void(0)" style="background-color: #EC2020;margin:0 5px;">确定</a>
+																<a class="sb_btn sb_cancelBtn sb_rejectCancel" href="javascript:void(0)">取消</a>
+															</div>
+															<i></i>
+														</div>
+													</div>
+													<div class="sb_rejectReasonC sb_jjr">
+														<div class="sb_rejectReason">
+															<h6>请选择用户拒绝的原因</h6>
+															<div>
+																<select style="width:100%;">
+																	<option value="">直接拒绝</option>
+																	<option value="">要求该业务不再打扰</option>
+																	<option value="">要求所有业务不再打扰</option>
+																</select>
+																<textarea onfocus="inputHintFocus(this)" onblur="inputHintBlur(this)" style="width:100%;padding:5px 0;height:60px;color:#bbb;margin-top:10px;">备注</textarea>
+															</div>
+															<div class="sb_rejectOpe">
+																<a class="sb_btn sb_cancelBtn" href="javascript:void(0)" style="background-color: #EC2020;margin:0 5px;">确定</a>
+																<a class="sb_btn sb_cancelBtn sb_rejectCancel" href="javascript:void(0)">取消</a>
+															</div>
+															<i></i>
+														</div>
+													</div>
+													<a class="sb_btn sb_cancelBtn sb_receiveBtn" href="shouli.html" target="_blank" style="background-color: #EC2020;margin-right:5px;">接受</a>
+													<a class="sb_btn sb_cancelBtn zbkl" href="javascript:void(0)" style="margin-right:5px;">暂不考虑</a>
+													<a class="sb_btn sb_cancelBtn sb_jj" href="javascript:void(0)" style="background:none;">拒绝</a>
+												</div>
+											</div>
+										</li>
+										<li style="background-color:#f0f0f0;">
+											<h6 style="font-size:14px;">营销话术：<a href="javascript:void(0)" style="float:right;color:#15A5ED;font-weight:normal;">办理>></a></h6>
+											<p><i></i><span>该用户目前每月消费为130元，使用的套餐为4G全国76元，改换套餐可满足目前的使用情况，降低每月消费。</span></p>
+										</li>
+										<li>
+											<a href="javascript:void(0)">
+												<img src="images/cp.png" width="60" alt="">
+												<div class="sb_goodsInfo">
+													<div class="sb_goodsName">4G全国套餐 存费送流量</div>
+													<div class="sb_goodsPrice">￥76</div>
+												</div>
+											</a>
+											<div class="sb_goodsSell">
+												<i class="sb_AT"></i>
+												<h6>营销话术：</h6>
+												<p><i></i><span>该用户目前每月消费为130元，使用的套餐为4G全国76元，改换套餐可满足目前的使用情况，降低每月消费。</span></p>
+												<h6>产品描述：</h6>
+												<p><i></i><span>该用户目前每月消费为130元，使用的套餐为4G全国76元，改换套餐可满足目前的使用情况，降低每月消费。</span></p>
+												<div class="sb_ab_btnBoxs">
+													<div class="sb_rejectReasonC sb_zbklr">
+														<div class="sb_rejectReason">
+															<h6>请选择用户暂不考虑的原因</h6>
+															<div>
+																<select style="width:100%;">
+																	<option value="">办理业务不方便</option>
+																	<option value="">暂时不需要</option>
+																	<option value="">价格不够优惠</option>
+																	<option value="">以后再说</option>
+																	<option value="">其它</option>
+																</select>
+																<textarea onfocus="inputHintFocus(this)" onblur="inputHintBlur(this)" style="width:100%;padding:5px 0;height:60px;color:#bbb;margin-top:10px;">备注</textarea>
+															</div>
+															<div class="sb_rejectOpe">
+																<a class="sb_btn sb_cancelBtn" href="javascript:void(0)" style="background-color: #EC2020;margin:0 5px;">确定</a>
+																<a class="sb_btn sb_cancelBtn sb_rejectCancel" href="javascript:void(0)">取消</a>
+															</div>
+															<i></i>
+														</div>
+													</div>
+													<div class="sb_rejectReasonC sb_jjr">
+														<div class="sb_rejectReason">
+															<h6>请选择用户拒绝的原因</h6>
+															<div>
+																<select style="width:100%;">
+																	<option value="">直接拒绝</option>
+																	<option value="">要求该业务不再打扰</option>
+																	<option value="">要求所有业务不再打扰</option>
+																</select>
+																<textarea onfocus="inputHintFocus(this)" onblur="inputHintBlur(this)" style="width:100%;padding:5px 0;height:60px;color:#bbb;margin-top:10px;">备注</textarea>
+															</div>
+															<div class="sb_rejectOpe">
+																<a class="sb_btn sb_cancelBtn" href="javascript:void(0)" style="background-color: #EC2020;margin:0 5px;">确定</a>
+																<a class="sb_btn sb_cancelBtn sb_rejectCancel" href="javascript:void(0)">取消</a>
+															</div>
+															<i></i>
+														</div>
+													</div>
+													<a class="sb_btn sb_cancelBtn sb_receiveBtn" href="shouli.html" target="_blank" style="background-color: #EC2020;margin-right:5px;">接受</a>
+													<a class="sb_btn sb_cancelBtn zbkl" href="javascript:void(0)" style="margin-right:5px;">暂不考虑</a>
+													<a class="sb_btn sb_cancelBtn sb_jj" href="javascript:void(0)">拒绝</a>
+												</div>
+											</div>
+										</li>
+									</ul>
+				        </div> -->
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="sb_recordTableC" id="sb_recordTableC">
+					<h6 style="font-size:14px;padding-bottom: 5px;border-bottom:1px solid #ddd;margin:0 20px 8px;overflow:hidden;"><span style="float:left;">接触记录</span><a href="recordSearch.html" target="_blank" style="font-size:12px;float:right;color:#999;">查询更多>></a></h6>
+					<div style="padding: 0 20px;overflow: hidden;position:relative;">
+						<a id="scrollLeft" class="sb_scroll sb_left"><span>《</span></a>
+						<a id="scrollRight" class="sb_scroll sb_right"><span>》</span></a>
+						<table id="recordTable" class="sb_recordTable" cellpadding="0" cellspacing="0" border="0" width="100%">
+							<tr>
+								<th>电话号码</th>
+								<th>触点类型</th>
+								<th>接触开始时间</th>
+								<th>接触内容</th>
+								<th>反馈信息</th>
+								<th>办理产品</th>
+								<th>操作人员</th>
+								<th>受理渠道</th>
+							</tr>
+							<!-- <tr>
+								<td>18678689452</td>
+								<td>触点类型1</td>
+								<td>2016-7-7</td>
+								<td>接触内容1</td>
+								<td>希望能降低资费</td>
+								<td>产品1</td>
+								<td>白展堂</td>
+								<td>杭州市西湖区天目山路营业厅1</td>
+							</tr> -->
+							<tr>
+								<td>18678689452</td>
+								<td>触点类型1</td>
+								<td>2016-7-7</td>
+								<td>接触内容1</td>
+								<td>希望能降低资费</td>
+								<td>产品1</td>
+								<td>白展堂</td>
+								<td>杭州市西湖区天目山路营业厅1</td>
+							</tr>
+							<tr>
+								<td>18678689452</td>
+								<td>触点类型1</td>
+								<td>2016-7-7</td>
+								<td>接触内容1</td>
+								<td>希望能降低资费</td>
+								<td>产品1</td>
+								<td>白展堂</td>
+								<td>杭州市西湖区天目山路营业厅1</td>
+							</tr>
+						</table>
+					</div>
+				</div>
+			</div>
+			<div class="sb_ab_tag sb_active" id="ab_tag" style="display:none;">
+				<i></i>为您推荐
+			</div>
+		</div>
+		<script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+		<script type="text/javascript" src="js/echarts/dist/echarts.js"></script>
+ 		<script type="text/javascript">
+		  // 路径配置
+      require.config({
+          paths: {
+              echarts: 'js/echarts/dist'
+          }
+      });
+			// 使用
+      require(
+          [
+              'echarts',
+              'echarts/chart/bar' // 使用柱状图就加载bar模块，按需加载
+          ],
+          function (ec) {
+              // 基于准备好的dom，初始化echarts图表
+              var myChart = ec.init(document.getElementById('chart'));
+              option = {
+							    tooltip : {
+							        trigger: 'axis',
+							        axisPointer : {
+							            type : 'shadow'
+							        },
+							        formatter: function (params,ticket,callback) {
+												            var res = '';
+												            var dw = params[0].name.split('(')[0],
+												            		d = params[0].name.split('(')[1];
+												            res += dw + '<br>';
+												            // dw = dw.split('{');
+												            // dw = '{' + dw[1];
+												            for(var i=0;i<3;i++){
+												            var ii = i*2;
+												            res += params[ii].seriesName + ':' + params[ii+1].value + '(' + d + '<br>';
+												            }
+												            return res;
+												        }
+							        //"{a0}：{c1}/{c2}{b1}({c0}%)<br>{a3}：{c4}/{c5}{b2}({c3}%)<br>{a6}：{c7}/{c8}{b3}({c6}%)"
+							    },
+							    legend: {
+							    		y : '25px',
+							    		data : ['3月份','4月份','5月份']
+							    },
+							    calculable : true,
+							    xAxis : [
+							        {
+							            type : 'category',
+							            data : ['流量使用(MB)','语音使用(分钟)','消费额(元)']
+							        }
+							    ],
+							    yAxis : [
+							        {
+							        		nameTextStyle : {
+							        			color :　'#555'
+							        		},
+							        		// name : '百分比(%)',
+								        	max : 150,
+								        	axisLabel : {
+				                    formatter: function(value){
+				                      return value+'%';
+				                    }
+                					}
+							        }
+							    ],
+							    series : [
+							        {
+							            name:'3月份',
+							            type:'bar',
+							            data:[40, 80, 50],
+							            itemStyle:{
+							            	normal:{
+							            		color:'#94c1ff'
+							            	}
+							            }
+							        },
+							        {
+							            name:'3月份使用量',
+							            type:'bar',
+							            data:[200, 1440, 750],
+							            barWidth :'0',
+							            itemStyle:{
+							            	normal:{
+							            		color:'#fff'
+							            	}
+							            }
+							        },
+							        {
+							            name:'4月份',
+							            type:'bar',
+							            data:[80, 20, 70],
+							            itemStyle:{
+							            	normal:{
+							            		color:'#ff9314'
+							            	}
+							            }
+							        },
+							        {
+							            name:'4月份使用量',
+							            type:'bar',
+							            data:[800, 360, 1050],
+							            barWidth :'0',
+							            itemStyle:{
+							            	normal:{
+							            		color:'#fff'
+							            	}
+							            }
+							        },
+							        {
+							            name:'5月份',
+							            type:'bar',
+							            data:[20, 90, 50],
+							            itemStyle:{
+							            	normal:{
+							            		color:'#ec2020'
+							            	}
+							            }
+							        },
+							        {
+							            name:'5月份使用量',
+							            type:'bar',
+							            data:[200, 810, 500],
+							            barWidth :'0',
+							            itemStyle:{
+							            	normal:{
+							            		color:'#fff'
+							            	}
+							            }
+							        }
+							    ]
+							};
+              // 为echarts对象加载数据 
+              myChart.setOption(option); 
+          }
+      );
+ 		</script>
+		<script>
+			$(function() {
+				$(document).on('click','#ab_tag',function(){
+					var ol = $('#siderbarBoxs').offset().left;
+					var ow = $('#siderbarBoxs').width();
+					if (ol !== 0) {
+						$(this).addClass('sb_active');
+						$('#siderbarBoxs').stop().animate({'left':'0'},250);
+					}
+					else{
+						$(this).removeClass('sb_active');
+						$('#siderbarBoxs').stop().animate({'left':-ow+'px'},250);
+					}
+				})
+				var trL = -207-($('#recordTable').find('tr').length-1)*27/2;
+						$('#siderbarBoxs').css('margin-top',trL+'px');
+				// $('#ab_tag').trigger('click');
+				/*$('.sb_ai_porsign').on('click','#proLevelup',function(){
+					var a = $('#ab_proDetail');
+					if (a.width() == 0) {
+						a.animate({'width':'301px'},250);
+					};
+					
+				})*/
+				$('.sb_proListNew').on('click','.sb_goodsNameS',function(){
+					$(this).siblings('.sb_goodsMore').slideToggle('fast');
+				})
+				$('.sb_goodsSell').on('click','*',function(e){
+					e.stopPropagation();
+				})
+				$('.sb_ab_btnBoxs').on('click','.zbkl',function(){
+					$(this).siblings('.sb_jjr').hide().siblings('.sb_zbklr').fadeToggle('fast');
+				})
+				$('.sb_ab_btnBoxs').on('click','.sb_jj',function(){
+					$(this).siblings('.sb_zbklr').hide().siblings('.sb_jjr').fadeToggle('fast');
+				})
+				$('.sb_ab_btnBoxs').on('click','.sb_receiveBtn',function(){
+					var pp = $('#confirm');
+					$('.sb_popupBg').show();
+					pp.css('margin-top',-(pp.height())/2+'px').show();
+				})
+				$('.sb_popup').on('click','.sb_popupbtn',function(){
+					var pp1 = $('#confirm'),
+							pp2 = $('#slsbr'),
+					    id = $(this).attr('id');
+					if (id == 'slsb'){
+						$('.sb_popup').hide();
+						pp2.css('margin-top',-(pp2.height())/2+'px').fadeIn('fast');
+					}else if(id == 'return'){
+						$('.sb_popup').hide();
+						pp1.css('margin-top',-(pp1.height())/2+'px').fadeIn('fast');
+					}else{
+						$('.sb_popup,.sb_popupBg').fadeOut('fast');
+					}
+				})
+				$('.sb_rejectReasonC').on('click','.sb_rejectCancel',function(e){
+					$(this).parents('.sb_rejectReasonC').fadeOut('fast');
+				})
+				$(document).on('click','#siderbarBoxs',function(e){
+					e.stopPropagation();
+				})
+				/*$(document).on('click',function(){
+					if ($('#siderbarBoxs').css('left') == '0px') {
+						$('#ab_proDetail').animate({'width':'0'},250).find('.sb_plugin_proList .sb_cur').removeClass('cur');
+						$('.sb_rejectReasonC').hide();
+					};
+				})*/
+				$('.sb_goodsList').on('click','li>a',function(){
+	        var t = $(this).parent(),
+	        		s = $(this).siblings('.sb_goodsSell');
+	        if (t.hasClass('sb_cur')) {
+	        	t.removeClass('sb_cur').find('.sb_rejectReasonC').hide();
+	        }else{
+	        	t.addClass('sb_cur').siblings('.sb_cur').removeClass('sb_cur').find('.sb_rejectReasonC').hide();
+	        	$(s).find('p').each(function(){
+			      	var t = $(this);
+			      	console.log(t.height())
+			      	console.log(t.children('span').height())
+			      	if (t.height()>t.children('span').height()) {
+			      		t.children('i').hide();
+			      	};
+			      })
+	        }
+	      })
+	      $('.sb_goodsSell').on('click','span',function(){
+	      	$(this).parent().toggleClass('sb_expand');
+	      })
+	      
+				/*$('#protoLevelup').on('click','li',function(){
+					$('#procanLevelup').animate({'height':tableH+22+'px'},250);
+				})
+				  $('#procanLevelupList').on('click','li',function(){
+					$(this).parents('.ab_itom').siblings('.ab_btnBoxs').fadeIn(250);
+				})
+	      $('.agreementList,.plugin_proList').on('click','li',function(){
+	        $(this).addClass('cur').siblings('.cur').removeClass('cur');
+	      })*/
+			})
+			$(function(){
+				var t = $('#recordTable'),
+						l = $('#scrollLeft'),
+						r = $('#scrollRight'),
+						d = 'sb_dis',
+						w = t.width(),
+						ww = t.parent().width();
+						l.addClass(d);
+				if (w<=ww) {
+					r.addClass(d);
+				};
+				r.click(function(){
+					if (!r.hasClass(d)) {
+						var tl = parseInt(t.css('left'));
+						if ((tl+w)>ww*2) {
+							t.stop().animate({'left':tl-ww+'px'});
+						}
+						else{
+							t.stop().animate({'left':ww-w+'px'});
+							r.addClass(d);
+						}
+						l.removeClass(d);
+					}
+				})
+				l.click(function(){
+					if (!l.hasClass(d)) {
+						var tl = parseInt(t.css('left'));
+						if ((tl+ww)<0) {
+							t.stop().animate({'left':tl+ww+'px'});
+						}
+						else{
+							t.stop().animate({'left':0});
+							l.addClass(d);
+						}
+						r.removeClass(d);
+					}
+				})
+			})
+			function inputHintFocus(input){
+				if (input.value == input.defaultValue) {
+					input.value = '';
+					input.style.color = '#555';
+				}
+			}
+			function inputHintBlur(input){
+				if (input.value=='') {
+					input.value=input.defaultValue;
+					input.style.color='#bbb';
+				}
+			}
+		</script>
+	</body>
+</html>
