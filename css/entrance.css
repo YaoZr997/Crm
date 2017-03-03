@@ -20,9 +20,10 @@
 .sb_userInfo{position:relative;padding-left:70px;line-height:24px;}
 .sb_userInfo .sb_row{overflow: hidden;padding-bottom: 5px;}
 .sb_row img{vertical-align: top;margin-left:5px;cursor: pointer;margin-top: 2px;}
-.sb_iconGroup img{margin-bottom: 5px;}
+.sb_iconGroup label{font-size:12px;margin:3px 5px 5px 0;background: url(../images/label.png) no-repeat;color: #aaa;line-height: 20px;display: inline-block;width: 50px;padding: 0 8px 0 20px;text-align: center;cursor: pointer;}
+.sb_iconGroup label.on{background-position: 0 -20px;color: #15A5ED;cursor: pointer;}
 .sb_col-6{width: 50%;float: left;}
-.sb_ai_portrait dt{font-weight:normal;font-size:16px;line-height: 1;padding-top: 10px;}
+.sb_ai_portrait dt{font-weight:normal;font-size:16px;line-height: 1;padding-top: 10px;cursor: pointer;}
 .sb_ai_portrait dd{padding-top:10px;overflow: hidden;}
 .sb_ai_portrait dd>a{line-height:1;padding:6px 0;display: block;float: left;margin: 3px;white-space: nowrap;min-width: 120px;text-align: center;}
 .sb_al_Infcontrol .sb_al_infFix{position:fixed;top:60px;}
